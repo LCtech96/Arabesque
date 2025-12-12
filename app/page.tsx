@@ -59,7 +59,7 @@ export default function Home() {
               Cucina e gusti, tradizioni e passioni
             </p>
             <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mt-3 max-w-2xl mx-auto font-montserrat">
-              Il punto d'incontro dove la freschezza del mare e l'alta cucina si abbracciano, 
+              Il punto d&apos;incontro dove la freschezza del mare e l&apos;alta cucina si abbracciano, 
               dando vita a un sublime connubio di sapori
             </p>
           </div>
@@ -72,13 +72,13 @@ export default function Home() {
             <div className="max-w-3xl mx-auto">
               <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center">
                 Nel cuore di Terrasini, tra le onde del Mediterraneo e la tradizione siciliana, 
-                il Ristorante Arabesque vi accoglie in un'atmosfera raffinata dove ogni piatto 
+                il Ristorante Arabesque vi accoglie in un&apos;atmosfera raffinata dove ogni piatto 
                 racconta una storia di passione e maestria. La nostra cucina celebra la purezza 
                 del pesce fresco, selezionato quotidianamente dai pescatori locali, e lo trasforma 
-                in creazioni culinarie che uniscono l'autenticità della tradizione all'innovazione 
+                in creazioni culinarie che uniscono l&apos;autenticità della tradizione all&apos;innovazione 
                 della gastronomia moderna. Ogni ingrediente è scelto con cura, ogni ricetta è 
                 frutto di anni di esperienza, ogni boccone è un viaggio attraverso i sapori del mare. 
-                Benvenuti in un'esperienza gastronomica unica, dove l'eccellenza incontra la passione.
+                Benvenuti in un&apos;esperienza gastronomica unica, dove l&apos;eccellenza incontra la passione.
               </p>
             </div>
           </div>

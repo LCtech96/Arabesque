@@ -64,7 +64,7 @@ export default function SafeImage({
 
   const imageProps = {
     src,
-    alt,
+    alt: alt || '',
     className: `${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`,
     onError: handleError,
     onLoad: handleLoad,
