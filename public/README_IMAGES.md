@@ -14,3 +14,4 @@ Le immagini caricate dall'utente sono:
 - Prima immagine: Tavola imbandita con vino (cover)
 - Seconda immagine: Piatto di pasta con pesce (profile)
 
+

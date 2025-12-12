@@ -16,6 +16,11 @@ const fireflies = Dancing_Script({
 export const metadata: Metadata = {
   title: "Ristorante Arabesque - Cucina di Pesce a Terrasini",
   description: "Il punto d'incontro dove la freschezza del mare e l'alta cucina si abbracciano",
+  icons: {
+    icon: "/profile-image - Copy.jpg",
+    shortcut: "/profile-image - Copy.jpg",
+    apple: "/profile-image - Copy.jpg",
+  },
 };
 
 export default function RootLayout({
