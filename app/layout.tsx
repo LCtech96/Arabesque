@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { getSiteUrl } from "@/lib/site";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -14,8 +15,12 @@ const fireflies = Dancing_Script({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(getSiteUrl()),
   title: "Ristorante Arabesque - Cucina di Pesce a Terrasini",
   description: "Il punto d'incontro dove la freschezza del mare e l'alta cucina si abbracciano",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/profile-image - Copy.jpg",
     shortcut: "/profile-image - Copy.jpg",

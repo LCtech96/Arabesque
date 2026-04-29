@@ -4,12 +4,14 @@ import NavigationBar from '@/components/NavigationBar';
 import Highlights from '@/components/Highlights';
 import Footer from '@/components/Footer';
 import SafeImage from '@/components/SafeImage';
+import BackButton from '@/components/BackButton';
 
 export default function Home() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <NavigationBar />
+      <BackButton />
       
       {/* Spacer for desktop nav */}
       <div className="hidden md:block h-16"></div>

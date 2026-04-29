@@ -37,3 +37,6 @@ postgresql://username:password@ep-xxxx-xxxx.region.aws.neon.tech/dbname?sslmode=
 Se in futuro aggiungi altre variabili d'ambiente, aggiungile qui seguendo lo stesso formato.
 
 
+
+
+

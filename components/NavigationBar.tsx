@@ -1,14 +1,15 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, Users, ShoppingBag, Moon, Sun } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Menu, Users, ShoppingBag, Moon, Sun, Home } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 import DisclaimerModal from './DisclaimerModal';
 
 export default function NavigationBar() {
   const { theme, toggleTheme } = useTheme();
-  const [showMenuDisclaimer, setShowMenuDisclaimer] = useState(false);
-  const [showChiSiamoDisclaimer, setShowChiSiamoDisclaimer] = useState(false);
+  const pathname = usePathname();
   const [showAsportoDisclaimer, setShowAsportoDisclaimer] = useState(false);
 
   return (
@@ -17,20 +18,39 @@ export default function NavigationBar() {
       <nav className="hidden md:flex fixed top-0 left-0 right-0 z-40 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-sm">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center space-x-6">
-            <button
-              onClick={() => setShowMenuDisclaimer(true)}
-              className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            <Link
+              href="/"
+              className={`flex items-center space-x-2 transition-colors ${
+                pathname === '/'
+                  ? 'text-blue-600 dark:text-blue-400 font-semibold'
+                  : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+              }`}
+            >
+              <Home size={20} />
+              <span>Home</span>
+            </Link>
+            <Link
+              href="/menu"
+              className={`flex items-center space-x-2 transition-colors ${
+                pathname === '/menu'
+                  ? 'text-blue-600 dark:text-blue-400 font-semibold'
+                  : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+              }`}
             >
               <Menu size={20} />
               <span>Menù</span>
-            </button>
-            <button
-              onClick={() => setShowChiSiamoDisclaimer(true)}
-              className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            </Link>
+            <Link
+              href="/chi-siamo"
+              className={`flex items-center space-x-2 transition-colors ${
+                pathname === '/chi-siamo'
+                  ? 'text-blue-600 dark:text-blue-400 font-semibold'
+                  : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+              }`}
             >
               <Users size={20} />
               <span>Chi siamo</span>
-            </button>
+            </Link>
             <button
               onClick={() => setShowAsportoDisclaimer(true)}
               className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -52,20 +72,39 @@ export default function NavigationBar() {
       {/* Mobile Navigation - Bottom */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-lg">
         <div className="flex justify-around items-center py-2">
-          <button
-            onClick={() => setShowMenuDisclaimer(true)}
-            className="flex flex-col items-center space-y-1 p-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          <Link
+            href="/"
+            className={`flex flex-col items-center space-y-1 p-3 transition-colors ${
+              pathname === '/'
+                ? 'text-blue-600 dark:text-blue-400 font-semibold'
+                : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+            }`}
+          >
+            <Home size={24} />
+            <span className="text-xs">Home</span>
+          </Link>
+          <Link
+            href="/menu"
+            className={`flex flex-col items-center space-y-1 p-3 transition-colors ${
+              pathname === '/menu'
+                ? 'text-blue-600 dark:text-blue-400 font-semibold'
+                : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+            }`}
           >
             <Menu size={24} />
             <span className="text-xs">Menù</span>
-          </button>
-          <button
-            onClick={() => setShowChiSiamoDisclaimer(true)}
-            className="flex flex-col items-center space-y-1 p-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          </Link>
+          <Link
+            href="/chi-siamo"
+            className={`flex flex-col items-center space-y-1 p-3 transition-colors ${
+              pathname === '/chi-siamo'
+                ? 'text-blue-600 dark:text-blue-400 font-semibold'
+                : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+            }`}
           >
             <Users size={24} />
             <span className="text-xs">Chi siamo</span>
-          </button>
+          </Link>
           <button
             onClick={() => setShowAsportoDisclaimer(true)}
             className="flex flex-col items-center space-y-1 p-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -86,19 +125,13 @@ export default function NavigationBar() {
 
       {/* Disclaimer Modals */}
       <DisclaimerModal
-        isOpen={showMenuDisclaimer}
-        onClose={() => setShowMenuDisclaimer(false)}
-      />
-      <DisclaimerModal
-        isOpen={showChiSiamoDisclaimer}
-        onClose={() => setShowChiSiamoDisclaimer(false)}
-      />
-      <DisclaimerModal
         isOpen={showAsportoDisclaimer}
         onClose={() => setShowAsportoDisclaimer(false)}
       />
     </>
   );
 }
+
+
 
 
