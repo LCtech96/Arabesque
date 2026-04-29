@@ -3,7 +3,7 @@
 export const restaurantName = "Ristorante Arabesque";
 
 export const restaurantDescription =
-  "Ristorante di pesce a Terrasini: pesce fresco ogni giorno, cucina siciliana sul mare, pizze e menù vicino all’aeroporto di Palermo Falcone-Borsellino. Prenota per pranzo o cena.";
+  "Ristorante di pesce a Terrasini: pesce fresco ogni giorno, cucina siciliana sul mare, pizze e menù vicino all'aeroporto di Palermo Falcone-Borsellino. Prenota per pranzo o cena.";
 
 export const defaultKeywords: string[] = [
   "ristorante pesce Terrasini",
