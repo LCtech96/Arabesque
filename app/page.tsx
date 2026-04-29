@@ -39,7 +39,7 @@ export default function Home() {
           <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto border-4 border-white dark:border-gray-900 rounded-full overflow-hidden bg-gradient-to-br from-blue-200 to-purple-200 dark:from-gray-700 dark:to-gray-800 shadow-lg">
             <SafeImage
               src="/profile-image.jpg"
-              alt="Ristorante Arabesque - Piatto di pesce"
+              alt="Ristorante Arabesque — piatto di pesce fresco e cucina siciliana a Terrasini"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 128px, 160px"
@@ -62,7 +62,8 @@ export default function Home() {
             </p>
             <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mt-3 max-w-2xl mx-auto font-montserrat">
               Il punto d&apos;incontro dove la freschezza del mare e l&apos;alta cucina si abbracciano, 
-              dando vita a un sublime connubio di sapori
+              dando vita a un sublime connubio di sapori — a Terrasini, a pochi minuti dall&apos;aeroporto 
+              di Palermo Falcone-Borsellino, con pesce fresco ogni giorno, pizze e specialità di mare.
             </p>
           </div>
 
