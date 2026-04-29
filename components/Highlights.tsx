@@ -97,32 +97,19 @@ const highlights: Highlight[] = [
     title: 'Best Seller',
     emoji: '⭐',
     content: (
-      <div className="space-y-4">
-        <p className="text-base leading-relaxed">
-          I piatti più richiesti dai nostri clienti:
+      <div className="space-y-5 text-base leading-relaxed">
+        <p>
+          <strong>Scialatielli al nero di seppia e burrata</strong>
+          <br />
+          <span className="text-gray-600 dark:text-gray-400">
+            oppure busiate o tagliolini piuttosto che scialatielli
+          </span>
         </p>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-blue-50 dark:bg-gray-700 p-4 rounded-lg">
-            <h3 className="font-semibold text-blue-600 dark:text-blue-400 mb-2">Dal Menù di Natale:</h3>
-            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
-              <li>Risottino baia dei coralli</li>
-              <li>Lasagne verdi ricco mare</li>
-              <li>Saccottino di cernia gratinata</li>
-              <li>Gamberoni in pastella</li>
-            </ul>
-          </div>
-          <div className="bg-purple-50 dark:bg-gray-700 p-4 rounded-lg">
-            <h3 className="font-semibold text-purple-600 dark:text-purple-400 mb-2">Dal Menù di Capodanno:</h3>
-            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
-              <li>Tartare di salmone avocado</li>
-              <li>Risottino con gamberi rossi</li>
-              <li>Ravioli bicolore ripieni di cernia</li>
-              <li>Bauletto di ricciola</li>
-            </ul>
-          </div>
-        </div>
-        <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-          Questi piatti rappresentano l&apos;eccellenza della nostra cucina e sono sempre disponibili.
+        <p>
+          <strong>Ravioli di cernia</strong>
+          <span className="text-gray-600 dark:text-gray-400">, oppure </span>
+          <strong>spaghetti alle vongole</strong>
+          <span className="text-gray-600 dark:text-gray-400">.</span>
         </p>
       </div>
     )
